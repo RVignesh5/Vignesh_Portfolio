@@ -175,9 +175,29 @@ function submitForm(name, email, message) {
 }
 document.addEventListener('DOMContentLoaded', function () {
   // Add a submit event listener to the form
-  document.getElementById('myForm').addEventListener('submit', function (event) {
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
       // Prevent the default form submission behavior
       event.preventDefault();
+
+    //Thanks pop up
+    var data = new FormData(event.target);
+    fetch("https://formspree.io/f/xyyrewyk", {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        window.alert('Form submitted successfully');
+        form.reset()
+      } else {
+        alert('Sorry! there was some error please submit again');
+      }
+    }).catch(error => {
+      console.log(error);
+      alert('Sorry! there was some error please submit again');
+    });
 
       // Display the thank you pop-up
       document.getElementById('thankYouPopup').style.display = 'block';
