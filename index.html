@@ -23,6 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  
 </head>
 
 <body>
@@ -76,7 +78,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:the.r.vignesha@gmail.com" class="contact-link">the.r.vignesha@gmail.com</a>
+              <a href="mailto:the.r.vignesh@gmail.com" class="contact-link">the.r.vignesha@gmail.com</a>
             </div>
 
           </li>
@@ -133,18 +135,38 @@
             <a href="https://www.linkedin.com/in/vigneshr-/" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
+            <style>
+    /* Change the color of the LinkedIn logo */
+    ion-icon[name="logo-linkedin"] {
+      color: #0077b5; /* Change this to the desired color */
+      
+    }
+  </style>
           </li>
 
           <li class="social-item">
             <a href="https://github.com/RVignesh5" class="social-link">
               <ion-icon name="logo-Github"></ion-icon>
             </a>
+            <style>
+              /* Change the color of the GitHub logo inside the social-item class */
+              .social-item ion-icon[name="logo-github"] {
+                color: #000000; /* Change this to the desired color */
+              }
+            </style>
+            
           </li>
 
           <li class="social-item">
             <a href="https://www.instagram.com/veee5_?utm_source" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
+            <style>
+              /* Change the color of the Instagram logo inside the social-item class */
+              .social-item ion-icon[name="logo-instagram"] {
+                color: #e4405f; /* Instagram's official color - change this to the desired color */
+              }
+            </style>
           </li>
 
         </ul>
@@ -233,7 +255,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
+                <img src="./assets/images/edit.png
                 " alt="design icon" width="40">
               </div>
 
@@ -250,7 +272,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="./assets/images/coding.png" alt="Web development icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -266,7 +288,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/vv.svg" alt="mobile app icon" width="40">
+                <img src="./assets/images/operating-system.png" alt="mobile app icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -282,14 +304,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="./assets/images/deep-learning.png" alt="camera icon" width="40">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">ML Image Training</h4>
 
                 <p class="service-item-text">
-                  pecializing in training machine learning models for image analysis and recognition.
+                  Specializing in training machine learning models for image analysis and recognition.
                 </p>
               </div>
 
@@ -581,15 +603,7 @@
 
         <section class="projectes">
 
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            
-          </ul>
-
+         
           <div class="filter-select-box">
 
             <button class="filter-select" data-select>
@@ -666,6 +680,24 @@
                 <h3 class="project-title">Wheat Disease Detection</h3>
 
                 <p class="project-category">Python ML </p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/RVignesh5/Python-Password-Strength-Checker">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/lock.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Password Strength Checker</h3>
+
+                <p class="project-category">Python</p>
 
               </a>
             </li>
@@ -815,12 +847,58 @@
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" active data-form-btn>
+            <style>
+              /* Add some basic styling for the pop-up */
+              #thankYouPopup {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9999;
+              }
+          
+              .visme_d {
+                /* Adjust the width and height of the Visme project container */
+                width: 80vw;
+                max-width: 800px; /* Adjust as needed */
+                height: 80vh;
+                max-height: 600px; /* Adjust as needed */
+              }
+            </style>
+          
+            <!-- Your button and other content goes here -->
+            <button class="form-btn" type="submit" data-form-btn onclick="showThankYouPopup()">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
+          
+            <div id="thankYouPopup">
+              <div class="visme_d" data-title="Untitled Project" data-url="01e3qdj6-untitled-project?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="30249">
+                <!-- Your Visme project embed code goes here -->
+              </div>
+            </div>
+          
+            
+ 
+            
+            
+            <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+            <div id="thankYouPopup">Thank You Popup Content</div>
+              <!-- Your pop-up content goes here -->
+              <p>Thank you for submitting the form!</p>
+              <button onclick="closePopup()">Close</button>
+            </div>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
 
+  <!-- Add the following script tag for the Visme forms embed -->
+  <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
           </form>
 
         </section>
