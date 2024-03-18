@@ -132,15 +132,25 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/vigneshr-/" class="social-link">
+            <a href="https://www.linkedin.com/in/vigneshr-" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
+            
             <style>
-    /* Change the color of the LinkedIn logo */
-    ion-icon[name="logo-linkedin"] {
-      color: #0077b5; /* Change this to the desired color */
+              /* Change the color of the LinkedIn logo */
+              ion-icon[name="logo-linkedin"] {
+                color: #d8dde0; /* Default color */
+                transition: color 0.3s ease; /* Smooth transition effect */
+              }
+            
+              /* Change the color on hover */
+              ion-icon[name="logo-linkedin"]:hover {
+                color: #0077b5; /* Change this to the desired color on hover */
+              }
+            </style>
+            
       
-    }
+    
   </style>
           </li>
 
@@ -150,8 +160,14 @@
             </a>
             <style>
               /* Change the color of the GitHub logo inside the social-item class */
-              .social-item ion-icon[name="logo-github"] {
-                color: #000000; /* Change this to the desired color */
+              .social-item a ion-icon[name="logo-Github"] {
+                color: #ffffface;
+                transition: color 0.3s ease; /* Change this to the desired color */
+              }  
+            
+              /* Change the color on hover */
+              .social-item a ion-icon[name="logo-Github"]:hover {
+                color: #ffffff; /* Change this to the desired color on hover */
               }
             </style>
             
@@ -164,8 +180,17 @@
             <style>
               /* Change the color of the Instagram logo inside the social-item class */
               .social-item ion-icon[name="logo-instagram"] {
-                color: #e4405f; /* Instagram's official color - change this to the desired color */
+                color: #ece0e2; /* Instagram's official color - change this to the desired color */
+                transition: color 0.3s ease; /* Smooth transition effect */
               }
+          
+              /* Change the color on hover */
+              .social-item ion-icon[name="logo-instagram"]:hover {
+                color: #c94550; /* Change this to the desired color on hover */
+              }
+            </style>
+          </li>
+          
             </style>
           </li>
 
@@ -174,6 +199,8 @@
       </div>
 
     </aside>
+
+    
 
 
 
@@ -263,7 +290,7 @@
                 <h4 class="h4 service-item-title">Content Writing</h4>
 
                 <p class="service-item-text">
-                  Transforming thoughts into impactful words, I specialize in creating compelling content that resonates and communicates effectively..
+                  Transforming thoughts into impactful words, I specialize in creating compelling content that resonates and communicates effectively.
                 </p>
               </div>
 
@@ -353,33 +380,13 @@
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                <img src="./assets/images/avatar-1.png" alt="Vignesh R" width="80" data-modal-img>
               </figure>
 
               <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
 
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
+          
 
 
         <!--
@@ -533,11 +540,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Python</h5>
-                <data value="80">80%</data>
+                <data value="80">85%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+                <div class="skill-progress-fill" style="width: 85%;"></div>
               </div>
 
             </li>
@@ -545,8 +552,21 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">IoT</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">MySQL</h5>
+                <data value="70">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">POWER BI</h5>
+                <data value="90">70%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -558,25 +578,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">MySql</h5>
-                <data value="90">90%</data>
+                <h5 class="h5">Machine Learning</h5>
+                <data value="90">60%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Typist</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 60%;"></div>
               </div>
 
             </li>
@@ -616,15 +623,27 @@
 
             </button>
 
-            <ul class="select-list">
+            <section class="projects">
 
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-             
-
-            </ul>
+              <ul class="filter-list">
+    
+                <li class="filter-item">
+                  <button class="active" data-filter-btn>All</button>
+                </li>
+    
+                <li class="filter-item">
+                  <button data-filter-btn>Web design</button>
+                </li>
+    
+                <li class="filter-item">
+                  <button data-filter-btn>Applications</button>
+                </li>
+    
+                <li class="filter-item">
+                  <button data-filter-btn>Web development</button>
+                </li>
+    
+              </ul>
 
           </div>
 
@@ -702,7 +721,7 @@
               </a>
             </li>
 
-           <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="web design">
               <a href="https://github.com/RVignesh5/Hotel-Management">
 
                 <figure class="project-img">
@@ -720,6 +739,7 @@
               </a>
             </li>
 
+            
 
              
           </ul>
@@ -748,7 +768,9 @@
               <a href="./assets/images/iot.jpg" target="_blank">
           
                   <figure class="blog-banner-box">
+                    
                       <img src="./assets/images/iot.jpg" alt="Design conferences in 2022" loading="lazy">
+                     
                   </figure>
             <div class="blog-content">
         
