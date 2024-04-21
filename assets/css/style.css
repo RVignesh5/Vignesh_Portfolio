@@ -1,12 +1,420 @@
+/* Define the keyframes animation for the logo */
+@keyframes logoAnimation {
+  0% {
+      opacity: 0; /* Start with the logo invisible */
+      transform: scale(0.8); /* Start slightly smaller */
+  }
+  100% {
+      opacity: 1; /* Fade in the logo */
+      transform: scale(1); /* Reach the original size */
+  }
+}
+
+/* Apply the animation to the logo */
+.logo {
+  display: block;
+  margin: 20px auto; /* Center the logo */
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  animation: logoAnimation 3s ease-out forwards; /* Apply the animation */
+}
+
+
+
+/* Define the keyframes animation for the header text */
+@keyframes headerAnimation {
+  0% {
+      opacity: 0; /* Start with the text invisible */
+      transform: translateY(-20px); /* Start slightly above */
+  }
+  100% {
+      opacity: 1; /* Fade in the text */
+      transform: translateY(0); /* Reach the original position */
+  }
+}
+
+/* Define the keyframes animation for the paragraph text */
+@keyframes paragraphAnimation {
+  0% {
+      opacity: 0; /* Start with the text invisible */
+      transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+      opacity: 1; /* Fade in the text */
+      transform: translateY(0); /* Reach the original position */
+  }
+}
+
+/* Apply the animations to the text elements */
+.cover-page-overlay h1 {
+  animation: headerAnimation 3s ease-out forwards; /* Animate header text */
+}
+
+.cover-page-overlay p {
+  animation: paragraphAnimation 3s ease-out forwards; /* Animate paragraph text */
+}
+
+
+
+
+
+/* Cover page overlay styling */
+.cover-page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(51, 51, 51, 0.9); /* Dark overlay with slight transparency */
+  color: #fff; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it covers the content */
+  visibility: visible; /* Make the overlay visible by default */
+  animation: zoomIn 1s ease-out forwards; /* Apply the zoom-in animation */
+}
+
+/* Keyframes animation for zooming in */
+@keyframes zoomIn {
+  from {
+      transform: scale(2); /* Start zoomed out */
+  }
+  to {
+      transform: scale(1); /* End at original size */
+  }
+}
+
+
+
 /*-----------------------------------*\
-  #style.css
+/* Base styles */
+/* Animation keyframes for fade and slide effect */
+@keyframes fadeInAndSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the main page content */
+.info-content {
+  animation: fadeInAndSlideUp 1s ease-out forwards;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Name and title styles */
+.name {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #333; /* Add desired color */
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #777; /* Add desired color */
+}
+
+
+/* Wave animation */
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Filter select box */
+.filter-select-box {
+    margin-top: 1rem;
+}
+
+.filter-select {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.select-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.filter-select-box.open .select-list {
+    display: block;
+}
+
+/* Additional styles as needed */
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Filter list styles */
+.filter-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-item button {
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.filter-item button.active {
+  color: blue;
+}
+
+/* Wave animation styles */
+.filter-item button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  right: -10px;
+  bottom: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 208, 0, 0.5), transparent);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.filter-item button:hover::before {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+/* Filter select box styles */
+.filter-select-box {
+  margin-top: 1rem;
+}
+
+.filter-select {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.10s ease;
+}
+
+.filter-select:hover {
+  border-color: rgb(255, 187, 0);
+}
+
+/* Select list styles */
+.select-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.select-item button {
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-item button:hover {
+  background-color: #f5f5f5;
+}
+
+  
+/* Initial styles for the subtitle */
+.h4.service-item-title {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  color: #fff; /* Initial text color */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions for scaling and color */
+}
+
+/* Hover effect */
+.h4.service-item-title:hover {
+  transform: scale(1.1); /* Scale the text slightly */
+  color: #f7cc0b; /* Change the text color on hover */
+}
+
+/* Apply the text shadow effect to the <h3> element */
+.h3 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  color: #fff; /* Set text color to white */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+               0 0 20px rgba(255, 255, 255, 0.3), 
+               0 0 30px rgba(255, 255, 255, 0.1); /* Initial text shadow */
+  transition: text-shadow 0.1s ease-in-out; /* Smooth transition */
+}
+
+/* Add hover effect */
+.h3:hover {
+  text-shadow: 0 0 15px rgba(255, 196, 0, 0.7), 
+               0 0 30px rgba(238, 216, 22, 0.5), 
+               0 0 45px rgba(240, 211, 84, 0.3); /* More intense shadow on hover */
+}
+
+  /* Base styles for the <h2> element */
+/* Apply the text shadow effect to the <h2> element */
+h2 {
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: #fff; /* Set text color to white */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+               0 0 20px rgba(255, 255, 255, 0.3), 
+               0 0 30px rgba(255, 255, 255, 0.1); /* Initial text shadow */
+  transition: text-shadow 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Add hover effect */
+h2:hover {
+  text-shadow: 0 0 15px rgba(255, 196, 0, 0.7), 
+               0 0 30px rgba(226, 197, 31, 0.5), 
+               0 0 45px rgba(240, 214, 97, 0.61); /* More intense shadow on hover */
+}
+
+
 \*-----------------------------------*/
+/* Apply a glowing effect to the avatar-box */
+/* Initial styles for navbar links */
+/* Apply hover effect and cursor change to the info-content div */
+/* Container styles */
+
+/* Initial styles for navigation bar links */
+/* Base styles for navigation bar links */
+.navbar-link {
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for navigation bar links */
+.navbar-link:hover {
+  color: #0077b5; /* Change text color on hover */
+  transform: translateY(-2px); /* Move the button up by 2 pixels */
+}
+
+/* Underline effect with animation */
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f3db04; /* Color of the underline */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect to animate underline */
+.navbar-link:hover::after {
+  width: 100%; /* Full width of the button */
+}
+
+/* Define fade-in and slide-up animation */
+ /* Define the keyframes for the fade-in and slide-down animation */
+ /* Define the initial state and animation for h2.article-title */
+ header h2.article-title {
+  animation: fadeInSlideDown 1.5s ease-out;
+}
 
 
-/**
- * copyright 2022 @codewithsadee
- */
+@keyframes fadeInSlideDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+header h2.article-title {
+  /* Initial state */
+  opacity: 1;
+  transform: translateY(0);
+  /* Animation */
+  transition: transform 0.5s ease, color 0.5s ease;
+}
 
+/* Define the hover effect */
+header h2.article-title:hover {
+  /* Make the text flow by changing the transformation on hover */
+  transform: translateX(10px);
+  /* Optional: You can change the text color when hovering */
+  color: #f8b808; /* Change this to your preferred color */
+}
+
+
+
+/* Apply the animation to the header h2.article-title element */
+
+
+
+/* Initial styles for navbar links */
+ /* Initial styles for navbar links */
+.navbar-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit; /* Keep the text color from the parent */
+  transition: text-shadow 0.5s ease-in-out; /* Smooth transition for text-shadow */
+  /* No initial glow */
+  text-shadow: none;
+}
+
+/* Add hover effect to start the glow effect */
+.navbar-link:hover {
+  text-shadow: 0 0 15px rgb(255, 230, 0); /* Initial glow */
+}
+
+/* Add persistent glow effect after hovering ends */
+.navbar-link:focus-visible,
+.navbar-link:focus {
+  text-shadow: 0 0 15px rgba(255, 217, 0, 0.925); /* Maintain glow */
+}
+
+/* Make sure focus state works correctly */
+.navbar-link:focus:not(:focus-visible) {
+  outline: none;
+}
 
 
 
@@ -112,6 +520,15 @@
 }
 
 
+/* Change text color to white for the section */
+.service {
+  color: white;
+}
+
+/* Additionally, you may want to specify text color for the h2 and ul elements */
+.service h2, .service .service-list {
+  color: white;
+}
 
 
 
@@ -333,7 +750,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .info-content .name {
@@ -1061,8 +1478,8 @@ main {
 }
 
 .blog-banner-box {
-  width: 100%;
-  height: 200px;
+  width: 88%;
+  height: 75px;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -1843,6 +2260,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /**
    * SIDEBAR
+
+   
    */
 
   .sidebar {
