@@ -1,5 +1,28 @@
 'use strict';
 
+// Function to apply the zoom-in effect to the cover page overlay
+function zoomInCoverPage() {
+  const overlay = document.getElementById('cover-page-overlay');
+  overlay.classList.add('show'); // Add the 'show' class to apply the effect
+}
+
+// Attach the function to the window load event
+window.addEventListener('load', zoomInCoverPage);
+
+function hideOverlay() {
+  const overlay = document.getElementById('cover-page-overlay');
+  overlay.style.visibility = 'hidden'; // Hide the overlay
+}
+
+
+function hideOverlay() {
+  const overlay = document.getElementById('cover-page-overlay');
+  overlay.style.visibility = 'hidden'; // Hide the overlay
+}
+
+// Hide the overlay after 5 seconds (5000 milliseconds)
+setTimeout(hideOverlay, 2000);
+
 
 
 // element toggle function
