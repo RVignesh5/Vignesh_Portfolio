@@ -1,5 +1,6 @@
 'use strict';
 
+
 // Function to apply the zoom-in effect to the cover page overlay
 function zoomInCoverPage() {
   const overlay = document.getElementById('cover-page-overlay');
@@ -202,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Prevent the default form submission behavior
       event.preventDefault();
 
-    //Thanks pop up
+    //Added by Manicodes
     var data = new FormData(event.target);
     fetch("https://formspree.io/f/xyyrewyk", {
       method: 'POST',
@@ -212,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }).then(response => {
       if (response.ok) {
-        window.alert('Form submitted successfully');
+        alert('Message sent successfully');
         form.reset()
       } else {
         alert('Sorry! there was some error please submit again');
