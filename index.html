@@ -10,7 +10,7 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
 
   <!--
     - custom css link
@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap">
 </head>
 
 <body>
@@ -45,122 +46,113 @@
     -->
 
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
-
         <figure class="avatar-box">
-          <img src="./assets/images/me.png" alt="Richard hanrick" width="80">
+          <img id="avatar" src="./assets/images/vin.png" alt="Vignesh R" width="80">
         </figure>
-        
-
         <div class="info-content">
           <h1 class="name" title="Vignesh R.">Vignesh R.</h1>
-
           <p class="title">Student</p>
         </div>
-        
-
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
-
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
               <a href="mailto:the.r.vignesh@gmail.com" class="contact-link">the.r.vignesh@gmail.com</a>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-
               <a href="tel:+91 9360407044" class="contact-link">+91 9360407044</a>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="calendar-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
-
               <time datetime="2003-10-05">October 05, 2003</time>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
               <address>Avadi, Chennai, India</address>
             </div>
-
           </li>
-
         </ul>
-
         <div class="separator"></div>
-
         <ul class="social-list">
-
           <li class="social-item">
             <a href="https://www.linkedin.com/in/vigneshr-/" class="social-link" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://github.com/RVignesh5" class="social-link" target="_blank">
-              <ion-icon name="logo-Github"></ion-icon>
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.instagram.com/veee5_?utm_source" class="social-link" target="_blank">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
-
         </ul>
-
       </div>
-
     </aside>
-
-
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the avatar image element by its ID
+        const avatarImage = document.getElementById('avatar');
+    
+        // Define the paths to the static and GIF images
+        const staticImageSrc = './assets/images/vin.png';
+        const gifImageSrc = './assets/images/vin.gif';
+    
+        // Flag to track whether the GIF is currently playing
+        let isGifPlaying = false;
+    
+        // Add a click event listener to the avatar image
+        avatarImage.addEventListener('click', function() {
+            if (!isGifPlaying) {
+                // If the GIF is not currently playing, switch to the GIF
+                avatarImage.src = gifImageSrc;
+                isGifPlaying = true;
+                
+                // Estimate the duration of the GIF (in milliseconds)
+                const gifDuration = 2000; // 2 seconds
+                
+                // Set a timeout to switch back to the static image
+                setTimeout(() => {
+                    avatarImage.src = staticImageSrc;
+                    isGifPlaying = false;
+                }, gifDuration);
+            }
+        });
+    });
+    </script>
+    
+        
 
 
 
